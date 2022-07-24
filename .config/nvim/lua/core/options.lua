@@ -1,6 +1,6 @@
 vim.opt.autoindent = false
 vim.opt.background = 'dark'
-vim.opt.cmdheight = 1
+vim.opt.breakindent = true
 vim.opt.errorbells = false
 vim.opt.expandtab = true
 vim.opt.hlsearch = false

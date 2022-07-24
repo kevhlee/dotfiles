@@ -1,0 +1,27 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"    _______  _______
+"   /  _/ _ \/ __/ _ |
+"  _/ // // / _// __ |
+" /___/____/___/_/ |_|
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set autoindent
+set background=dark
+set breakindent
+set expandtab
+set incsearch
+set noerrorbells
+set nohlsearch
+set noswapfile
+set nowrap
+set relativenumber
+set scrolloff=12
+set shiftwidth=2
+set smartindent
+set softtabstop=2
+set splitbelow
+set splitright
+set tabstop=2
+set termguicolors
+set undofile
