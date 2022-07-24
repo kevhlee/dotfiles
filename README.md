@@ -1,7 +1,9 @@
 # dotfiles 📂
 
-My personal dotfiles.
+My personal dotfiles for MacOS 🍎.
 
+- Package Manager
+  - [Homebrew](https://brew.sh/)
 - Terminal:
   - [Kitty](https://sw.kovidgoyal.net/kitty/)
 - Shell:
@@ -9,6 +11,8 @@ My personal dotfiles.
   - [Starship](https://starship.rs/)
 - Text Editor:
   - [Neovim](https://neovim.io/)
+- Window Manager:
+  - [Rectangle](https://rectangleapp.com/)
 
 ## Usage
 
