@@ -1,0 +1,17 @@
+""" Globals -----------------------------------------------------------
+let mapleader = " "
+let maplocalleader = " "
+
+""" Plugins -----------------------------------------------------------
+set commentary
+
+""" Options -----------------------------------------------------------
+set history=1000
+set nohlsearch
+set incsearch
+set number
+set relativenumber
+set scrolloff=12
+
+""" Mappings ----------------------------------------------------------
+nnoremap <leader>p :action FormatCode<CR>

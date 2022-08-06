@@ -10,6 +10,8 @@ My personal dotfiles.
   - [Homebrew](https://brew.sh/)
 - Editor
   - [Neovim](https://neovim.io/)
+- Window Manager
+  - [Amethyst](https://ianyh.com/amethyst/)
 
 ## Usage
 

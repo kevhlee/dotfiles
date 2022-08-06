@@ -71,9 +71,14 @@ packer.startup(function()
   use { "catppuccin/nvim", as = "catppuccin" }
   use { "dracula/vim", as = "dracula" }
   use "romgrk/doom-one.vim"
-  use "morhetz/gruvbox"
+  use "ellisonleao/gruvbox.nvim"
   use "joshdick/onedark.vim"
   use "chriskempson/vim-tomorrow-theme"
+  use "folke/tokyonight.nvim"
+  use "markvincze/panda-vim"
+  use "gosukiwi/vim-atom-dark"
+  use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
+  use 'ayu-theme/ayu-vim'
 end)
 
 -- Start plugin configuration

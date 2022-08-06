@@ -8,6 +8,7 @@ vim.opt.mouse = "a"
 vim.opt.number = true
 vim.opt.completeopt = "menuone,noselect"
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 8
 vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.softtabstop = 2

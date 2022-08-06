@@ -52,6 +52,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "<leader>dj", vim.lsp.diagnostic.goto_next)
   buf_set_keymap("n", "<leader>dk", vim.lsp.diagnostic.goto_prev)
   buf_set_keymap("n", "<leader>ca", vim.lsp.buf.code_action)
+  buf_set_keymap("n", "<leader>cr", vim.lsp.buf.rename)
   buf_set_keymap("n", "<leader>p", vim.lsp.buf.formatting_sync)
 end
 
@@ -78,10 +79,15 @@ capabilities.textDocument.completion.completionItem = {
 }
 
 local default_config_servers = {
+  "bashls",
   "cssls",
   "gopls",
   "html",
   "jsonls",
+  "marksman",
+  "pyright",
+  "rust_analyzer",
+  "sqlls",
   "tsserver",
   "vimls",
   "yamlls",
