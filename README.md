@@ -11,7 +11,7 @@ My personal dotfiles.
 - Editor
   - [Neovim](https://neovim.io/)
 - Window Manager
-  - [Amethyst](https://ianyh.com/amethyst/)
+  - [Rectangle](https://rectangleapp.com/)
 
 ## Usage
 
