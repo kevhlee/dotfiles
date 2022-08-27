@@ -21,6 +21,17 @@ install_homebrew_deps() {
   brew bundle > /dev/null
 }
 
+uninstall_homebrew() {
+  if [ ! -x "$(command -v brew)" ]; then
+    echo 'Homebrew already installed'
+    exit 0
+  fi
+
+  echo "Uninstalling Homebrew..."
+  # TODO: Does this remove the dependencies too?
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+}
+
 #######################################################################
 ## Main
 #######################################################################
@@ -38,15 +49,14 @@ if [ $COMMAND = 'install' ]; then
     install_homebrew_deps
   fi
 
-  # TODO: Install SDKMAN
   echo "Installing SDKMAN..."
+  curl -s "https://get.sdkman.io" | bash
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
 
   echo "Creating symbolic links..."
   ln -s $DOT_DIR/.zshrc $HOME/.zshrc
   ln -s $DOT_DIR/.gitconfig $HOME/.gitconfig
   ln -s $DOT_DIR/.ideavimrc $HOME/.ideavimrc
-  ln -s $DOT_DIR/.yabairc $HOME/.yabairc
-  ln -s $DOT_DIR/.skhdrc $HOME/.skhdrc
   ln -s $DOT_DIR/.config/kitty $HOME/.config/kitty
   ln -s $DOT_DIR/.config/nvim $HOME/.config/nvim
 elif [ $COMMAND = 'uninstall' ]; then
@@ -54,18 +64,16 @@ elif [ $COMMAND = 'uninstall' ]; then
   unlink $HOME/.zshrc
   unlink $HOME/.gitconfig
   unlink $HOME/.ideavimrc
-  unlink $HOME/.yabairc
-  unlink $HOME/.skhdrc
   unlink $HOME/.config/kitty
   unlink $HOME/.config/nvim
 
-  # TODO: Uninstall dependencies installed via Homebrew
-  echo "Uninstalling dependencies..."
+  if [[ $OSTYPE == 'darwin'* ]]; then
+    uninstall_homebrew
+  fi
 
-  # TODO: Uninstall SDKMAN
   echo "Uninstalling SDKMAN..."
+  rm -rf $HOME/.sdkman
 
-  # Remove Neovim data
   rm -rf .cache/nvim
   rm -rf .local/share/nvim
 elif [ $COMMAND = 'update' ]; then

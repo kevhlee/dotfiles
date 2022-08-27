@@ -112,7 +112,12 @@ export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 ## Aliases
 ##
 
-alias config="nvim $HOME/dotfiles"
+config() {
+  PREV_PATH=$(pwd)
+  cd $HOME/dotfiles
+  nvim .
+  cd $PREV_PATH
+}
 
 ##
 ## Node

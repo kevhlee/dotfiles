@@ -76,5 +76,5 @@ nvim_tree.setup {
   },
 }
 
-vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
+vim.keymap.set("n", "<C-t>", "<cmd>NvimTreeToggle<cr>")
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFocus<cr>")

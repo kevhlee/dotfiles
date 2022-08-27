@@ -61,8 +61,6 @@ packer.startup(function()
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
 
-  -- TODO: Should I use lspsaga (https://github.com/glepnir/lspsaga.nvim)?
-
   -- Git
   use "lewis6991/gitsigns.nvim"
   use "tpope/vim-fugitive"
