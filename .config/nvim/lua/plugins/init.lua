@@ -40,7 +40,6 @@ packer.startup(function()
 
   -- File editing
   use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
   use "tpope/vim-commentary"
   use "nvim-lualine/lualine.nvim"
 
@@ -67,23 +66,16 @@ packer.startup(function()
 
   -- Themes
   use { "catppuccin/nvim", as = "catppuccin" }
-  use { "dracula/vim", as = "dracula" }
-  use "romgrk/doom-one.vim"
   use "ellisonleao/gruvbox.nvim"
-  use "joshdick/onedark.vim"
-  use "chriskempson/vim-tomorrow-theme"
-  use "folke/tokyonight.nvim"
-  use "markvincze/panda-vim"
-  use "gosukiwi/vim-atom-dark"
-  use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
-  use 'ayu-theme/ayu-vim'
+  use "ayu-theme/ayu-vim"
+  use "navarasu/onedark.nvim"
+  use "projekt0n/github-nvim-theme"
 end)
 
 -- Start plugin configuration
 require("plugins.colorscheme")
 require("plugins.telescope")
 require("plugins.treesitter")
-require("plugins.nvim-tree")
 require("plugins.lualine")
 require("plugins.gitsigns")
 require("plugins.colorizer")

@@ -1,6 +1,6 @@
 """ Globals -----------------------------------------------------------
-let mapleader = " "
-let maplocalleader = " "
+let mapleader=" "
+let maplocalleader=" "
 
 """ Plugins -----------------------------------------------------------
 set commentary
@@ -14,4 +14,9 @@ set relativenumber
 set scrolloff=12
 
 """ Mappings ----------------------------------------------------------
-nnoremap <leader>p :action FormatCode<CR>
+nmap <leader>p <Action>(ReformatCode)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>cr <Action>(RenameElement)
+nmap <leader>dj <Action>(GotoNextError)
+nmap <leader>dk <Action>(GotoPreviousError)

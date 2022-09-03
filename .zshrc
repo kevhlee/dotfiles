@@ -112,6 +112,11 @@ export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 ## Aliases
 ##
 
+# alias weather="curl wttr.in"
+
+alias weather="curl -X GET 'https://wttr.in?format=3'"
+alias weather-full="curl -X GET 'https://wttr.in'"
+
 config() {
   PREV_PATH=$(pwd)
   cd $HOME/dotfiles
