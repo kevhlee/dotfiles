@@ -4,20 +4,17 @@
 -- Catppuccin
 --=====================================================================
 
--- vim.g.catppuccin_flavour = "frappe"
--- vim.g.catppuccin_flavour = "latte"
--- vim.g.catppuccin_flavour = "macchiato"
--- vim.g.catppuccin_flavour = "mocha"
+-- vim.g.catppuccin_flavour = "frappe"  -- latte, frappe, macchiato, mocha
 
 -- require("catppuccin").setup {
---   transparent_background = true,
+--  transparent_background = true,
 -- 	term_colors = true,
 -- 	styles = {
 -- 		comments = { "italic" },
 -- 		conditionals = { "italic" },
 -- 		loops = {},
 -- 		functions = {},
--- 		keywords = {},
+-- 		keywords = { "bold" },
 -- 		strings = {},
 -- 		variables = {},
 -- 		numbers = {},
@@ -43,14 +40,14 @@
 -- Ayu
 --=====================================================================
 
-vim.api.nvim_create_autocmd('ColorScheme', {
-  group = vim.api.nvim_create_augroup('highlight_cmds', { clear = true }),
-  command = 'hi Normal guibg=NONE ctermbg=NONE',
-})
+-- vim.api.nvim_create_autocmd('ColorScheme', {
+--   group = vim.api.nvim_create_augroup('highlight_cmds', { clear = true }),
+--   command = 'hi Normal guibg=NONE ctermbg=NONE',
+-- })
 
-vim.g.ayucolor="dark" -- light, mirage, dark
+-- vim.g.ayucolor="dark" -- light, mirage, dark
 
-vim.cmd [[ colorscheme ayu ]]
+-- vim.cmd [[ colorscheme ayu ]]
 
 --=====================================================================
 -- Gruvbox
@@ -77,33 +74,19 @@ vim.cmd [[ colorscheme ayu ]]
 -- One Dark
 --=====================================================================
 
--- require("onedark").setup {
---   style = 'darker', -- dark, darker, cool, deep, warm, warmer
---   transparent = true,
---   term_colors = true,
---   code_style = {
---     comments = 'italic',
---     keywords = 'none',
---     functions = 'none',
---     strings = 'none',
---     variables = 'none',
---   },
---   colors = {},
---   highlights = {},
--- }
+require("onedark").setup {
+  style = 'darker', -- dark, darker, cool, deep, warm, warmer
+  transparent = true,
+  term_colors = true,
+  code_style = {
+    comments = 'italic',
+    keywords = 'none',
+    functions = 'none',
+    strings = 'none',
+    variables = 'none',
+  },
+  colors = {},
+  highlights = {},
+}
 
--- vim.cmd [[ colorscheme onedark ]]
-
---=====================================================================
--- GitHub
---=====================================================================
-
--- This theme doesn't require explicity calling "colorscheme"
-
--- require("github-theme").setup {
---   theme_style = "dimmed", -- dark, dimmed, dark_default, light, light_default
---   comment_style = "NONE",
---   keyword_style = "NONE",
---   function_style = "NONE",
---   variable_style = "NONE",
--- }
+vim.cmd [[ colorscheme onedark ]]

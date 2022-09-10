@@ -30,6 +30,12 @@ packer.init {
   },
 }
 
+-- TODO: Add akinsho/bufferline.nvim (For buffer line)
+-- TODO: Add akinsho/toggleterm.nvim (For terminal integration)
+-- TODO: Add lukas-reineke/indent-blankline.nvim (for indent guides)
+-- TODO: Add back kyazdani42/nvim-tree.lua (for file explorer)
+-- TODO: Add kylechui/nvim-surround
+
 packer.startup(function()
   use "wbthomason/packer.nvim"
 
@@ -69,7 +75,6 @@ packer.startup(function()
   use "ellisonleao/gruvbox.nvim"
   use "ayu-theme/ayu-vim"
   use "navarasu/onedark.nvim"
-  use "projekt0n/github-nvim-theme"
 end)
 
 -- Start plugin configuration

@@ -112,7 +112,7 @@ export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 ## Aliases
 ##
 
-# alias weather="curl wttr.in"
+export TERM=xterm-256color
 
 alias weather="curl -X GET 'https://wttr.in?format=3'"
 alias weather-full="curl -X GET 'https://wttr.in'"
