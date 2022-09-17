@@ -9,6 +9,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export DEFAULT_USER="$(whoami)"
+export TERM=xterm-256color
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -111,8 +112,6 @@ export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 ##
 ## Aliases
 ##
-
-export TERM=xterm-256color
 
 alias weather="curl -X GET 'https://wttr.in?format=3'"
 alias weather-full="curl -X GET 'https://wttr.in'"

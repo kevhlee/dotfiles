@@ -1,6 +1,6 @@
 # dotfiles 📁
 
-My personal dotfiles.
+My personal dotfiles, primarily meant for MacOS.
 
 - Terminal
   - [Kitty](https://sw.kovidgoyal.net/kitty/)

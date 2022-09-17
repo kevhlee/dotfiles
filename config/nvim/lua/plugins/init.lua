@@ -31,29 +31,22 @@ packer.init {
 }
 
 -- TODO: Add akinsho/bufferline.nvim (For buffer line)
--- TODO: Add akinsho/toggleterm.nvim (For terminal integration)
--- TODO: Add lukas-reineke/indent-blankline.nvim (for indent guides)
--- TODO: Add back kyazdani42/nvim-tree.lua (for file explorer)
--- TODO: Add kylechui/nvim-surround
 
 packer.startup(function()
   use "wbthomason/packer.nvim"
-
-  -- Search
   use "nvim-lua/plenary.nvim"
+
   use "nvim-telescope/telescope.nvim"
-  use "nvim-telescope/telescope-file-browser.nvim"
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
-  -- File editing
   use "kyazdani42/nvim-web-devicons"
-  use "tpope/vim-commentary"
+  use "kyazdani42/nvim-tree.lua"
   use "nvim-lualine/lualine.nvim"
-
-  -- Highlighting
+  use "akinsho/toggleterm.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
   use "nvim-treesitter/nvim-treesitter"
   use "norcalli/nvim-colorizer.lua"
 
-  -- LSP
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
@@ -66,11 +59,11 @@ packer.startup(function()
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
 
-  -- Git
   use "lewis6991/gitsigns.nvim"
   use "tpope/vim-fugitive"
+  use "tpope/vim-commentary"
+  use "tpope/vim-surround"
 
-  -- Themes
   use { "catppuccin/nvim", as = "catppuccin" }
   use "ellisonleao/gruvbox.nvim"
   use "ayu-theme/ayu-vim"
@@ -78,12 +71,23 @@ packer.startup(function()
 end)
 
 -- Start plugin configuration
-require("plugins.colorscheme")
-require("plugins.telescope")
-require("plugins.treesitter")
-require("plugins.lualine")
-require("plugins.gitsigns")
-require("plugins.colorizer")
-require("plugins.mason")
-require("plugins.lspconfig")
-require("plugins.cmp")
+local plugins = {
+  "colorscheme",
+  "telescope",
+  "treesitter",
+  "nvim_tree",
+  "lualine",
+  "toggleterm",
+  "indent_blankline",
+  "gitsigns",
+  "colorizer",
+  "mason",
+  "lspconfig",
+  "cmp",
+}
+
+for _, plugin in ipairs(plugins) do
+  if not pcall(require, string.format("plugins.%s", plugin)) then
+    print(string.format("Error: Loading %s failed", plugin))
+  end
+end
