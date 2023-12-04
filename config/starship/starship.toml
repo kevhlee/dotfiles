@@ -1,0 +1,43 @@
+command_timeout = 3000
+
+[battery]
+disabled = true
+
+[cmd_duration]
+min_time = 1500
+
+[directory]
+truncation_length = 5
+
+[java]
+detect_files = [
+  "build.xml",
+  "pom.xml",
+  "build.gradle.kts",
+  "build.sbt",
+  ".java-version",
+  "deps.edn",
+  "project.clj",
+  "build.boot"
+]
+
+[perl]
+disabled = true
+
+[purescript]
+disabled = true
+
+[raku]
+disabled = true
+
+[red]
+disabled = true
+
+[rlang]
+disabled = true
+
+[solidity]
+disabled = true
+
+[vlang]
+disabled = true

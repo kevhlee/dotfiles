@@ -1,0 +1,13 @@
+# Personal config
+config/kitty/themes/
+config/kitty/current_theme.conf
+config/kitty/kitty.app.png
+
+# MacOS
+.DS_Store
+
+# Visual Studio Code
+.vscode/
+
+# My personal collection of TODO's
+TODOs.md

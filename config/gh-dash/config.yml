@@ -1,0 +1,27 @@
+defaults:
+  layout:
+    prs:
+      base:
+        grow: true
+        hidden: false
+      lines:
+        hidden: true
+      repo:
+        grow: true
+        width: 20
+        hidden: false
+  preview:
+    open: true
+    width: 128
+pager:
+  diff: less
+prSections:
+  - filters: is:pr is:open author:@me
+    limit: 20
+    title: Sent by me
+  - filters: is:pr is:open user:@me
+    limit: 20
+    title: Needs my review
+  - filters: is:pr is:open involves:@me
+    limit: 20
+    title: Involves me

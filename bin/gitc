@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if ! [ -d .git ]; then
+    echo "Not a git repository"
+    exit 1
+fi
+
+if [ $# -eq 0 ]; then
+    branch=$(git branch --format="%(refname:short)" | gum choose)
+    if [ -z $branch ]; then
+        exit 1
+    fi
+    git checkout $branch
+else
+    git checkout $@
+fi
