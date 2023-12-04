@@ -30,7 +30,7 @@ ZSH_WEB_SEARCH_ENGINES=(
   reddit "https://www.reddit.com/search/?q="
   twitch "https://www.twitch.tv/search?term="
   youtube "https://www.youtube.com/results?search_query="
-  souregraph "https://sourcegraph.com/search?q="
+  sourcegraph "https://sourcegraph.com/search?q="
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -110,8 +110,8 @@ alias gw='$(git rev-parse --show-toplevel)/gradlew'
 alias gradlew='$(git rev-parse --show-toplevel)/gradlew'
 alias weather="curl -X GET 'https://wttr.in'"
 
-logo() {
-    neofetch --ascii $DOTFILES/config/neofetch/bongo
+bongo() {
+  neofetch --ascii $DOTFILES/config/neofetch/bongo
 }
 
 config() {
@@ -140,5 +140,5 @@ export PATH="/usr/local/sbin:$PATH"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-logo
+bongo
 # zprof # for profiling

@@ -8,6 +8,7 @@ Usage: ./dot.sh <command>
 
 Commands:
   setup       Sets up or updates files and symbolic links
+  backup      Creates a backup
   uninstall   Removes files and symbolic links
 EOF
 }
@@ -23,6 +24,10 @@ setup() {
   ln -Fhs $DOTFILES/config/nvim $HOME/.config/nvim
   ln -Fhs $DOTFILES/config/kitty $HOME/.config/kitty
   ln -Fhs $DOTFILES/config/alacritty $HOME/.config/alacritty
+}
+
+backup() {
+  cp -r . ../dotfiles-$(date +"%s")
 }
 
 uninstall() {
@@ -49,6 +54,8 @@ fi
 command=$1
 if [ $command = 'setup' ]; then
   setup
+elif [ $command = 'backup' ]; then
+  backup
 elif [ $command = 'uninstall' ]; then
   uninstall
 else
