@@ -66,17 +66,16 @@ export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
 eval "$(fnm env --use-on-cd)"
 
 ##
-## OCaml
-##
-
-# opam configuration
-[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
-##
 ## Standard ML
 ##
 
 export PATH="$PATH:/usr/local/smlnj/bin"
+
+##
+## OCaml
+##
+
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 ##
 ## Liferay
@@ -109,9 +108,14 @@ export EDITOR=nvim
 alias gw='$(git rev-parse --show-toplevel)/gradlew'
 alias gradlew='$(git rev-parse --show-toplevel)/gradlew'
 alias weather="curl -X GET 'https://wttr.in'"
+alias cat=bat
 
 bongo() {
   neofetch --ascii $DOTFILES/config/neofetch/bongo
+}
+
+yor() {
+  neofetch --size 25% --kitty $DOTFILES/config/neofetch/spy-family-yor.jpeg
 }
 
 config() {
@@ -140,5 +144,4 @@ export PATH="/usr/local/sbin:$PATH"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-bongo
 # zprof # for profiling
