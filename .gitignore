@@ -1,4 +1,6 @@
 # Personal config
+config/alacritty/themes/
+config/alacritty/current_theme.toml
 config/kitty/themes/
 config/kitty/current_theme.conf
 

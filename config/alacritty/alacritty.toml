@@ -1,0 +1,79 @@
+import = [
+    "~/.config/alacritty/current_theme.toml"
+]
+
+live_config_reload = true
+
+[window]
+blur = true
+decorations = "Buttonless"
+opacity = 0.89
+option_as_alt = "Both"
+padding.x = 8
+padding.y = 12
+startup_mode = "Windowed"
+
+[scrolling]
+history = 25000
+
+[font]
+# normal.family = "IosevkaTerm Nerd Font"
+# normal.style = "Regular"
+# size = 16.0
+
+# normal.family = "JetBrainsMono Nerd Font"
+# normal.style = "Regular"
+# bold.style = "Bold"
+# italic.style = "Italic"
+# size = 15.0
+
+# normal.family = "MartianMono Nerd Font"
+# normal.style = "Condensed Regular"
+# bold.style = "Condensed Regular"
+# italic.style = "Condensed Medium"
+# size = 14.0
+
+normal.family = "ZedMono Nerd Font"
+normal.style = "Regular"
+size = 15.0
+
+builtin_box_drawing = false
+
+glyph_offset.x = 0
+glyph_offset.y = 0
+
+offset.x = 0
+offset.y = 4
+
+[colors]
+draw_bold_text_with_bright_colors = false
+transparent_background_colors = true
+
+##
+## Keyboard (MacOS)
+##
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "+"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "-"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "0"
+mods = "Command"

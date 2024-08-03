@@ -14,23 +14,13 @@ ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
-  aliases
-  docker
-  docker-compose
-  golang
-  kubectl
-  minikube
-  rust
-  web-search
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
-
-ZSH_WEB_SEARCH_ENGINES=(
-  reddit "https://www.reddit.com/search/?q="
-  twitch "https://www.twitch.tv/search?term="
-  youtube "https://www.youtube.com/results?search_query="
-  sourcegraph "https://sourcegraph.com/search?q="
+    aliases
+    docker
+    docker-compose
+    kubectl
+    minikube
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -54,24 +44,6 @@ export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 export PATH=$PATH:$(go env GOPATH)/bin
 
 ##
-## Python
-##
-
-export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
-
-##
-## Node
-##
-
-eval "$(fnm env --use-on-cd)"
-
-##
-## Standard ML
-##
-
-export PATH="$PATH:/usr/local/smlnj/bin"
-
-##
 ## OCaml
 ##
 
@@ -84,18 +56,11 @@ export PATH="$PATH:/usr/local/smlnj/bin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 
 ##
-## C
+## Playdate
 ##
 
-export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
-export LDFLAGS="-L/usr/local/opt/llvm/lib"
-export CPPFLAGS="-I/usr/local/opt/llvm/include"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/usr/local/lib
-
-# export LDFLAGS="-L/usr/local/opt/llvm@12/lib"
-# export CPPFLAGS="-I/usr/local/opt/llvm@12/include"
-# export PATH="/usr/local/opt/llvm@12/bin:$PATH"
+export PLAYDATE_SDK_PATH="$HOME/Developer/PlaydateSDK"
+export PATH="$PATH:$PLAYDATE_SDK_PATH/bin"
 
 ##
 ## Personal
@@ -105,33 +70,23 @@ export DOTFILES="$HOME/dotfiles"
 export PATH="$PATH:$HOME/bin"
 export EDITOR=nvim
 
+alias mw='$(git rev-parse --show-toplevel)/mvnw'
+alias mavenw='$(git rev-parse --show-toplevel)/mvnw'
 alias gw='$(git rev-parse --show-toplevel)/gradlew'
 alias gradlew='$(git rev-parse --show-toplevel)/gradlew'
 alias weather="curl -X GET 'https://wttr.in'"
 alias cat=bat
 
 bongo() {
-  neofetch --ascii $DOTFILES/config/neofetch/bongo
+    neofetch --ascii $DOTFILES/config/neofetch/bongo
 }
 
-yor() {
-  neofetch --size 25% --kitty $DOTFILES/config/neofetch/spy-family-yor.jpeg
-}
-
-config() {
-  PREV_PATH=$(pwd) && cd $HOME/dotfiles && nvim && cd $PREV_PATH
-}
-
-config-kitty() {
-  PREV_PATH=$(pwd) && cd $HOME/dotfiles/config/kitty && nvim && cd $PREV_PATH
-}
-
-config-vim() {
-  PREV_PATH=$(pwd) && cd $HOME/dotfiles/config/vim && vim && cd $PREV_PATH
-}
-
-config-nvim() {
-  PREV_PATH=$(pwd) && cd $HOME/dotfiles/config/nvim && nvim && cd $PREV_PATH
+edit-config() {
+if [ -z "$1" ]; then
+    PREV_PATH=$(pwd) && cd $HOME/dotfiles && nvim && cd $PREV_PATH
+else
+    PREV_PATH=$(pwd) && cd $HOME/dotfiles/config/$1 && nvim && cd $PREV_PATH
+fi
 }
 
 export PATH="/usr/local/sbin:$PATH"
