@@ -2,11 +2,11 @@
 
 My personal dotfiles, designed for use in MacOS.
 
-- __Terminal__: [Kitty](https://sw.kovidgoyal.net/kitty/)
-- __Shell__: Zsh ([Oh My Zsh](https://ohmyz.sh/))
-- __Package Manager__: [Homebrew](https://brew.sh/)
-- __Editor__: [Neovim](https://neovim.io/)
-- __Window Manager__: [Rectangle](https://rectangleapp.com/)
+- **Terminal**: [Kitty](https://sw.kovidgoyal.net/kitty/), [Alacritty](https://alacritty.org/)
+- **Shell**: Zsh ([Oh My Zsh](https://ohmyz.sh/))
+- **Package Manager**: [Homebrew](https://brew.sh/)
+- **Editor**: [Neovim](https://neovim.io/)
+- **Window Manager**: [Rectangle](https://rectangleapp.com/)
 
 ## 🚀 Setup
 

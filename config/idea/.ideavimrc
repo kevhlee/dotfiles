@@ -1,52 +1,53 @@
 "" ##################
-"" ## Globals
+"" Globals
 "" ##################
 
 let mapleader=" "
 let maplocalleader=" "
 
 "" ##################
-"" ## Options
+"" Options
 "" ##################
 
-set history=1000
 set nohlsearch
 set incsearch
 set number
 set relativenumber
 
 "" ##################
-"" ## Plugins
+"" Plugins
 "" ##################
 
 set commentary
-set NERDTree
+set easymotion
+set nerdtree
 set sneak
 
 "" ##################
-"" ## Mappings
+"" Mappings
 "" ##################
 
-nmap <C-v> <Action>(MoveTabRight)
-nmap <C-x> <Action>(MoveTabDown)
+nmap [b <Action>(PreviousTab)
+nmap ]b <Action>(NextTab)
 
-nmap gi <Action>(GotoImplementation)
+nmap <C-v> <Action>(SplitVertically)
+nmap <C-x> <Action>(SplitHorizontally)
+
 nmap gd <Action>(GotoDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap go <Action>(GotoTypeDeclaration)
 nmap gr <Action>(ShowUsages)
 nmap gl <Action>(ShowErrorDescription)
 nmap [d <Action>(GotoPreviousError)
 nmap ]d <Action>(GotoNextError)
+nmap <leader>ca <Action>(CodeMenu)
+nmap <leader>cf <Action>(ReformatCode)
+nmap <leader>cr <Action>(RenameElement)
 
 nmap <leader>ff <Action>(GotoFile)
 nmap <leader>fg <Action>(FindInPath)
 
-nmap <leader>ca <Action>(CodeMenu)
-nmap <leader>cf <Action>(ReformatCode)
-vmap <leader>cf <Action>(ReformatCode)
-nmap <leader>cr <Action>(RefactoringMenu)
-
-nmap <C-n> :NERDTreeToggle<cr>
-nmap <leader>n :NERDTreeFocus<cr>
+nmap <C-n> :NERDTreeToggle<CR>
 
 nmap <leader>tz <Action>(ToggleDistractionFreeMode)
 nmap <leader>tp <Action>(TogglePowerSave)

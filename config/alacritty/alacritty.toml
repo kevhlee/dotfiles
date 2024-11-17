@@ -1,13 +1,13 @@
+[general]
+live_config_reload = true
 import = [
     "~/.config/alacritty/current_theme.toml"
 ]
 
-live_config_reload = true
-
 [window]
 blur = true
 decorations = "Buttonless"
-opacity = 0.89
+opacity = 0.88
 option_as_alt = "Both"
 padding.x = 8
 padding.y = 12
@@ -17,25 +17,9 @@ startup_mode = "Windowed"
 history = 25000
 
 [font]
-# normal.family = "IosevkaTerm Nerd Font"
-# normal.style = "Regular"
-# size = 16.0
-
-# normal.family = "JetBrainsMono Nerd Font"
-# normal.style = "Regular"
-# bold.style = "Bold"
-# italic.style = "Italic"
-# size = 15.0
-
-# normal.family = "MartianMono Nerd Font"
-# normal.style = "Condensed Regular"
-# bold.style = "Condensed Regular"
-# italic.style = "Condensed Medium"
-# size = 14.0
-
-normal.family = "ZedMono Nerd Font"
+normal.family = "Iosevka Nerd Font"
 normal.style = "Regular"
-size = 15.0
+size = 14.0
 
 builtin_box_drawing = false
 

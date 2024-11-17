@@ -50,6 +50,12 @@ export PATH=$PATH:$(go env GOPATH)/bin
 [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 ##
+## Node
+##
+
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+##
 ## Liferay
 ##
 
@@ -75,13 +81,12 @@ alias mavenw='$(git rev-parse --show-toplevel)/mvnw'
 alias gw='$(git rev-parse --show-toplevel)/gradlew'
 alias gradlew='$(git rev-parse --show-toplevel)/gradlew'
 alias weather="curl -X GET 'https://wttr.in'"
-alias cat=bat
 
 bongo() {
     neofetch --ascii $DOTFILES/config/neofetch/bongo
 }
 
-edit-config() {
+config() {
 if [ -z "$1" ]; then
     PREV_PATH=$(pwd) && cd $HOME/dotfiles && nvim && cd $PREV_PATH
 else
