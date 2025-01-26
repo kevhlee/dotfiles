@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ALACRITTY_DIR=$DOTFILES/config/alacritty
+
+font=$(ls $ALACRITTY_DIR/fonts | gum choose)
+if [[ -z "$font" ]]; then
+    exit 1
+fi
+ln -f "$ALACRITTY_DIR/fonts/$font" $ALACRITTY_DIR/current_font.toml

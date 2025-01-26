@@ -1,7 +1,15 @@
 # Personal config
+config/alacritty/fonts/
 config/alacritty/themes/
+config/alacritty/current_font.toml
 config/alacritty/current_theme.toml
+config/ghostty/fonts/
+config/ghostty/themes/
+config/ghostty/current_font
+config/ghostty/current_theme
+config/kitty/fonts/
 config/kitty/themes/
+config/kitty/current_font.conf
 config/kitty/current_theme.conf
 
 # Images

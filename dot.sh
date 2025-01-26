@@ -16,7 +16,6 @@ EOF
 setup() {
   ln -fs $DOTFILES/config/zsh/.zshrc $HOME/.zshrc
   ln -fs $DOTFILES/config/starship/starship.toml $HOME/.config/starship.toml
-  ln -fs $DOTFILES/config/vim/.vimrc $HOME/.vimrc
   ln -fs $DOTFILES/config/idea/.ideavimrc $HOME/.ideavimrc
 
   ln -Fhs $DOTFILES/bin $HOME/bin
@@ -24,6 +23,7 @@ setup() {
   ln -Fhs $DOTFILES/config/nvim $HOME/.config/nvim
   ln -Fhs $DOTFILES/config/kitty $HOME/.config/kitty
   ln -Fhs $DOTFILES/config/alacritty $HOME/.config/alacritty
+  ln -Fhs $DOTFILES/config/ghostty $HOME/.config/ghostty
 }
 
 backup() {
@@ -32,14 +32,16 @@ backup() {
 
 uninstall() {
   unlink -f $HOME/.config/kitty
+  unlink -f $HOME/.config/alacritty
+  unlink -f $HOME/.config/ghostty
   unlink -f $HOME/.zshrc
   unlink -f $HOME/.config/starship.toml
-  unlink -f $HOME/.vimrc
   unlink -f $HOME/.ideavimrc
 
-  unlink -f $HOME/bin
   unlink -f $HOME/.config/gh-dash
   unlink -f $HOME/.config/nvim
+
+  unlink -f $HOME/bin
 }
 
 #######################################################################
