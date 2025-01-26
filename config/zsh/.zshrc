@@ -4,8 +4,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export DEFAULT_USER="$(whoami)"
 
-ZSH_THEME="agnoster"
-
 zstyle ':omz:update' mode reminder  # disabled, auto, reminder
 zstyle ':omz:update' frequency 13   # in days
 
@@ -44,22 +42,10 @@ export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 export PATH=$PATH:$(go env GOPATH)/bin
 
 ##
-## OCaml
-##
-
-[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
-##
 ## Node
 ##
 
 eval "$(fnm env --use-on-cd --shell zsh)"
-
-##
-## Liferay
-##
-
-export PATH="$PATH:$HOME/Library/PackageManager/bin"
 
 ##
 ## Playdate
@@ -69,6 +55,12 @@ export PLAYDATE_SDK_PATH="$HOME/Developer/PlaydateSDK"
 export PATH="$PATH:$PLAYDATE_SDK_PATH/bin"
 
 ##
+## Python
+##
+
+export PATH="$PATH:$HOME/.local/bin"
+
+##
 ## Personal
 ##
 
@@ -76,22 +68,16 @@ export DOTFILES="$HOME/dotfiles"
 export PATH="$PATH:$HOME/bin"
 export EDITOR=nvim
 
-alias mw='$(git rev-parse --show-toplevel)/mvnw'
-alias mavenw='$(git rev-parse --show-toplevel)/mvnw'
-alias gw='$(git rev-parse --show-toplevel)/gradlew'
+alias mvnw='$(git rev-parse --show-toplevel)/mvnw'
 alias gradlew='$(git rev-parse --show-toplevel)/gradlew'
 alias weather="curl -X GET 'https://wttr.in'"
 
-bongo() {
-    neofetch --ascii $DOTFILES/config/neofetch/bongo
-}
-
 config() {
-if [ -z "$1" ]; then
-    PREV_PATH=$(pwd) && cd $HOME/dotfiles && nvim && cd $PREV_PATH
-else
-    PREV_PATH=$(pwd) && cd $HOME/dotfiles/config/$1 && nvim && cd $PREV_PATH
-fi
+    if [ -z "$1" ]; then
+        PREV_PATH=$(pwd) && cd $HOME/dotfiles && nvim && cd $PREV_PATH
+    else
+        PREV_PATH=$(pwd) && cd $HOME/dotfiles/config/$1 && nvim && cd $PREV_PATH
+    fi
 }
 
 export PATH="/usr/local/sbin:$PATH"

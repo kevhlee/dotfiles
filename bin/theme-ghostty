@@ -1,0 +1,9 @@
+#!/bin/sh
+
+GHOSTTY_DIR=$DOTFILES/config/ghostty
+
+theme=$(ls $GHOSTTY_DIR/themes | gum choose)
+if [[ -z "$theme" ]]; then
+    exit 1
+fi
+ln -f "$GHOSTTY_DIR/themes/$theme" $GHOSTTY_DIR/current_theme

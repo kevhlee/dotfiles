@@ -1,0 +1,9 @@
+#!/bin/sh
+
+GHOSTTY_DIR=$DOTFILES/config/ghostty
+
+font=$(ls $GHOSTTY_DIR/fonts | gum choose)
+if [[ -z "$font" ]]; then
+    exit 1
+fi
+ln -f "$GHOSTTY_DIR/fonts/$font" $GHOSTTY_DIR/current_font

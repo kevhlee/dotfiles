@@ -1,33 +1,21 @@
 [general]
-live_config_reload = true
 import = [
-    "~/.config/alacritty/current_theme.toml"
+	"~/.config/alacritty/current_font.toml",
+	"~/.config/alacritty/current_theme.toml"
 ]
+live_config_reload = true
 
 [window]
 blur = true
 decorations = "Buttonless"
-opacity = 0.88
+opacity = 0.92
 option_as_alt = "Both"
 padding.x = 8
-padding.y = 12
+padding.y = 8
 startup_mode = "Windowed"
 
 [scrolling]
 history = 25000
-
-[font]
-normal.family = "Iosevka Nerd Font"
-normal.style = "Regular"
-size = 14.0
-
-builtin_box_drawing = false
-
-glyph_offset.x = 0
-glyph_offset.y = 0
-
-offset.x = 0
-offset.y = 4
 
 [colors]
 draw_bold_text_with_bright_colors = false

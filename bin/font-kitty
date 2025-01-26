@@ -1,0 +1,9 @@
+#!/bin/sh
+
+KITTY_DIR=$DOTFILES/config/kitty
+
+font=$(ls $KITTY_DIR/fonts | gum choose)
+if [[ -z "$font" ]]; then
+    exit 1
+fi
+ln -f "$KITTY_DIR/fonts/$font" $KITTY_DIR/current_font.conf
