@@ -18,7 +18,7 @@ setup() {
   ln -fs $DOTFILES/config/starship/starship.toml $HOME/.config/starship.toml
   ln -fs $DOTFILES/config/idea/.ideavimrc $HOME/.ideavimrc
 
-  ln -Fhs $DOTFILES/bin $HOME/bin
+  ln -Fhs $DOTFILES/scripts/bin $HOME/bin
   ln -Fhs $DOTFILES/config/gh-dash $HOME/.config/gh-dash
   ln -Fhs $DOTFILES/config/nvim $HOME/.config/nvim
   ln -Fhs $DOTFILES/config/kitty $HOME/.config/kitty
