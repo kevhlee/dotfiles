@@ -1,9 +1,0 @@
-#!/bin/sh
-
-ALACRITTY_DIR=$DOTFILES/config/alacritty
-
-theme=$(ls $ALACRITTY_DIR/themes | gum choose)
-if [[ -z "$theme" ]]; then
-    exit 1
-fi
-ln -f "$ALACRITTY_DIR/themes/$theme" $ALACRITTY_DIR/current_theme.toml

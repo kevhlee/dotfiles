@@ -1,9 +1,0 @@
-#!/bin/sh
-
-KITTY_DIR=$DOTFILES/config/kitty
-
-theme=$(ls $KITTY_DIR/themes | gum choose)
-if [[ -z "$theme" ]]; then
-    exit 1
-fi
-ln -f "$KITTY_DIR/themes/$theme" $KITTY_DIR/current_theme.conf
