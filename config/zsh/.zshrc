@@ -30,12 +30,6 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
 ##
-## Docker
-##
-
-export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
-
-##
 ## Go
 ##
 
@@ -68,6 +62,7 @@ export DOTFILES="$HOME/dotfiles"
 export PATH="$PATH:$HOME/bin"
 export EDITOR=nvim
 
+alias docker="podman"
 alias mvnw='$(git rev-parse --show-toplevel)/mvnw'
 alias gradlew='$(git rev-parse --show-toplevel)/gradlew'
 alias weather="curl -X GET 'https://wttr.in'"

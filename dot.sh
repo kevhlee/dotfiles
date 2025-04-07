@@ -21,8 +21,6 @@ setup() {
   ln -Fhs $DOTFILES/scripts/bin $HOME/bin
   ln -Fhs $DOTFILES/config/gh-dash $HOME/.config/gh-dash
   ln -Fhs $DOTFILES/config/nvim $HOME/.config/nvim
-  ln -Fhs $DOTFILES/config/kitty $HOME/.config/kitty
-  ln -Fhs $DOTFILES/config/alacritty $HOME/.config/alacritty
   ln -Fhs $DOTFILES/config/ghostty $HOME/.config/ghostty
 }
 
@@ -31,8 +29,6 @@ backup() {
 }
 
 uninstall() {
-  unlink -f $HOME/.config/kitty
-  unlink -f $HOME/.config/alacritty
   unlink -f $HOME/.config/ghostty
   unlink -f $HOME/.zshrc
   unlink -f $HOME/.config/starship.toml
