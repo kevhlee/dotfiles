@@ -23,5 +23,8 @@ config/kitty/current_theme.conf
 # Visual Studio Code
 .vscode/
 
+# Python
+.venv/
+
 # My personal collection of TODO's
 TODOs.md
